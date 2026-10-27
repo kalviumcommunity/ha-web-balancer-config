@@ -4,9 +4,9 @@ CloudNotes runs behind one global HTTP(S) load balancer. The load balancer sends
 
 ## Intended design
 
-1. **Health checks.** The health check calls the app's health endpoint, `/health`, on port 8080. The app returns HTTP 200 there. A VM that fails the check is taken out of rotation.
+1. **Health checks.** The health check calls the app's health endpoint, `/healthz`, on port 8080. The app returns HTTP 200 there. A VM that fails the check is taken out of rotation.
 2. **High availability.** The backend group is regional in `us-central1` and spreads its VMs across three zones: `us-central1-a`, `us-central1-b`, and `us-central1-c`. A zone failure must not take CloudNotes down.
-3. **HTTPS only.** Port 80 is a redirect-only front door. Every HTTP request gets a `301` redirect to HTTPS. No user is served plain HTTP.
+3. **HTTPS only.** Port 80 is a redirect-only front door. Every HTTP request is redirected to HTTPS. No user is served plain HTTP.
 
 ## Files
 

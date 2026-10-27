@@ -1,6 +1,5 @@
 Backend service: cloudnotes-backend
   Protocol:       HTTP
-  Named port:     http:8080
   Health check:   cloudnotes-http-hc
 
 Backend
@@ -8,4 +7,3 @@ Backend
   Location type:  Regional
   Region:         us-central1
   Zones:          us-central1-a
-  Balancing mode: Utilization 80%

@@ -1,7 +1,7 @@
 Health check: cloudnotes-http-hc
   Protocol:            HTTP
   Port:                8080
-  Request path:        /healthz
+  Request path:        /health
   Check interval:      10 s
   Timeout:             5 s
   Healthy threshold:   2

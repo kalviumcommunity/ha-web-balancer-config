@@ -3,7 +3,6 @@ Frontend: HTTP port 80
 Target proxy: cloudnotes-http-proxy
 
 Rule 1
-  Host:           any
-  Path:           any
+  Host:              any
+  Path:              any
   Redirect to HTTPS: Off
-  Response code:  (none)
